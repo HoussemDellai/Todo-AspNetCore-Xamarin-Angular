@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
+import { Todo } from '../../models/todo.model';
 
 @Component({
     selector: 'fetch-todo',
@@ -19,13 +20,4 @@ export class FetchTodoComponent {
             console.log("this.todoes.length : " + this.todoes.length);
         }, error => console.error(error));
     }
-}
-
-export class Todo {
-
-    id: number;
-    title: string;
-    description: string;
-    createdAt: string;
-    isDone: boolean;
 }

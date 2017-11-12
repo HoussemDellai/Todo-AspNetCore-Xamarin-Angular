@@ -9,18 +9,22 @@
         <tr>
             <th>Id</th>
             <th>Title</th>
-            <th>Description</th>
+            <th>Details</th>
             <th>IsDone</th>
             <th>CreatedAt</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let todo of todoes">
             <td>{{ todo.id }}</td>
             <td>{{ todo.title }}</td>
-            <td>{{ todo.description }}</td>
+            <td>{{ todo.details }}</td>
             <td>{{ todo.isDone }}</td>
             <td>{{ todo.createdAt }}</td>
+            <td>
+                <a [routerLink]="['/edit-todo', todo.id]"> Edit </a>
+            </td>
         </tr>
     </tbody>
 </table>

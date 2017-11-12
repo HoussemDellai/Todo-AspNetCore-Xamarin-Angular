@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { Http } from '@angular/http';
+import { Todo } from '../../models/todo.model';
 
 @Component({
     selector: 'add-todo',
@@ -21,14 +22,4 @@ export class AddTodoComponent {
             console.log("result : " + result);
         }, error => console.error(error));
     }
-}
-
-
-export class Todo {
-
-    id: number;
-    title: string;
-    description: string;
-    createdAt: string;
-    isDone: boolean;
 }

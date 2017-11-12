@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { FetchTodoComponent } from './components/fetchtodo/fetchtodo.component';
 import { AddTodoComponent } from './components/addtodo/addtodo.component';
+import { EditTodoComponent } from './components/edittodo/edittodo.component';
 import { CounterComponent } from './components/counter/counter.component';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CounterComponent } from './components/counter/counter.component';
         FetchDataComponent,
         FetchTodoComponent,
         AddTodoComponent,
+        EditTodoComponent,
         HomeComponent
     ],
     imports: [
@@ -33,6 +35,7 @@ import { CounterComponent } from './components/counter/counter.component';
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'fetch-todo', component: FetchTodoComponent },
             { path: 'add-todo', component: AddTodoComponent },
+            { path: 'edit-todo/:todoId', component: EditTodoComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]
