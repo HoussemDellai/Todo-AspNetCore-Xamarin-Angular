@@ -1,0 +1,23 @@
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<div>
+    <label>Title</label>
+    <input type="text" id="id1" [(ngModel)]="todo.title" />
+</div>
+<div>
+    <label>Description</label>
+    <input type="text" id="id2" [(ngModel)]="todo.description" />
+</div>
+<div>
+    <label>IsDone</label>
+    <input type="text" id="id3" [(ngModel)]="todo.isDone" />
+</div>
+<div>
+    <label>CreatedAt</label>
+    <input type="text" id="id4" [(ngModel)]="todo.createdAt" />
+</div>
+<div>
+    <button (click)="postTodo()">Create Todo</button>
+</div>
