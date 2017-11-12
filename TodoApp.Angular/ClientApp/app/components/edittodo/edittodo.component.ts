@@ -12,7 +12,7 @@ export class EditTodoComponent implements OnInit, OnDestroy {
 
     todoId: number;
     private sub: any;
-    public todo: Todo = new Todo();
+    public todo: Todo;
 
     constructor(private route: ActivatedRoute, private http: Http) { }
 
@@ -39,14 +39,25 @@ export class EditTodoComponent implements OnInit, OnDestroy {
     ngOnDestroy() {
         this.sub.unsubscribe();
     }
-    
-    public putTodo(todo: Todo) {
+
+    public putTodo() {
 
         var baseUrl = "http://localhost:50001/";
 
-        this.http.post(baseUrl + 'api/Todoes', this.todo).subscribe(result => {
+        this.http.put(baseUrl + 'api/Todoes/' + this.todo.id, this.todo).subscribe(result => {
 
             console.log("result : " + result);
+        }, error => console.error(error));
+    }
+
+    public deleteTodo() {
+
+        var baseUrl = "http://localhost:50001/";
+
+        this.http.delete(baseUrl + 'api/Todoes/' + this.todo.id).subscribe(result => {
+
+            console.log("result : " + result);
+
         }, error => console.error(error));
     }
 }

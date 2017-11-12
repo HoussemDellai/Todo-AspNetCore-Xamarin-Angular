@@ -1,6 +1,6 @@
-<h1>Weather forecast</h1>
+<h1>Edit Todo</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>This component demonstrates editing data from the server.</p>
 
 <div>
     <label>Title</label>
@@ -19,5 +19,7 @@
     <input type="text" [(ngModel)]="todo.createdAt" />
 </div>
 <div>
-    <button (click)="postTodo()">Create Todo</button>
+    <button (click)="putTodo()">Edit Todo</button>
+
+    <button (click)="deleteTodo()">Delete Todo</button>
 </div>

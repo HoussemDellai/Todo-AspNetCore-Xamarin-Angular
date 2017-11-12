@@ -8,7 +8,7 @@ import { Todo } from '../../models/todo.model';
 })
 export class AddTodoComponent {
 
-    public todo: Todo = new Todo();
+    public todo: Todo = new Todo(1, "Create new tutorial", "About Angular and Web API", "11-11-2017", false);
 
     constructor(private http: Http) {
     }
